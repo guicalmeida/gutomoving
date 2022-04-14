@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+  </head>
+
+  <body>
+    <div class="fileira">
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+    </div>
+    <div class="fileira">
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+    </div>
+    <div class="fileira">
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+      <div class="barra hor"></div>
+      <div class="barra ver"></div>
+    </div>
+  </body>
+</html>
+
+<style>
+    body {
+        margin:100px;
+        width: 4480px;
+        height: 840px;
+        position: relative;
+
+    }
+  .barra {
+    width: 7px;
+    height: 280px;
+    border: 2px solid black;
+    transition: 1.5s ease-in-out;
+
+  }
+
+  .hor {
+    height: 7px;
+    width: 280px;
+  }
+
+  .fileira {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+</style>
+
+<script>
+    const barras = document.querySelectorAll('.barra')
+    let rotation = 0;
+    setInterval(() => {
+        barras.forEach(barra => {
+            barra.style.transform = `rotate(${rotation}deg)`
+        })
+        rotation += 90
+    }, 3000)
+</script>
